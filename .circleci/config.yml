@@ -20,9 +20,12 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+#      - run:
+#          name: Run Tests
+#          command: export TERM=xterm && ./gradlew assembleMasterRelease
       - run:
-          name: Run Tests
-          command: export TERM=xterm && ./gradlew assembleMasterRelease
+          name: Build-app
+          command: ./gradlew assembleMasterRelease
       - store_artifacts:
           path: app/build/reports
           destination: reports

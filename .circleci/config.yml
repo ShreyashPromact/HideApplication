@@ -25,7 +25,7 @@ jobs:
 #          command: export TERM=xterm && ./gradlew assembleMasterRelease
       - run:
           name: Build-app
-          command: ./gradlew assembleMasterRelease
+          command: export TERM=xterm && ./gradlew assembleMasterRelease
       - store_artifacts:
           path: app/build/reports
           destination: reports

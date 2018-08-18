@@ -27,7 +27,7 @@ jobs:
           name: Build-app
           command: export TERM=xterm && ./gradlew assembleRelease
       - store_artifacts:
-          path: /src/app/build/outputs/apk/
+          path: ~/src/app/build/outputs/apk/
           prefix: apk
 #      - store_test_results:
 #          path: app/build/test-results
